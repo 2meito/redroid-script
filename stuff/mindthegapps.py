@@ -62,24 +62,6 @@ class MindTheGapps(General):
                 "94dd174ff16c2f0006b66b25025efd04",
             ],
         },
-        "12.0.0": {
-            "x86_64": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240619/MindTheGapps-12.1.0-x86_64-20240619.zip",
-                "05d6e99b6e6567e66d43774559b15fbd"
-            ],
-            "x86": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240619/MindTheGapps-12.1.0-x86-20240619.zip",
-                "ff2421a75afbdda8a003e4fd25e95050"
-            ],
-            "arm64": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240619/MindTheGapps-12.1.0-arm64-20240619.zip",
-                "94dd174ff16c2f0006b66b25025efd04",
-            ],
-            "arm": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240619/MindTheGapps-12.1.0-arm-20240619.zip",
-                "5af756b3b5776c2f6ee024a9f7f42a2f",
-            ],
-        },
     }
 
     arch = host()
@@ -108,3 +90,13 @@ class MindTheGapps(General):
         shutil.copytree(
             os.path.join(self.extract_to, "system", ),
             os.path.join(self.copy_dir, "system"), dirs_exist_ok=True, )
+
+#        shutil.rmtree(os.path.join(self.copy_dir, "system", "addon.d", ))
+        #shutil.rmtree(os.path.join(self.copy_dir, "system", "product", "overlay", ))
+        #shutil.rmtree(os.path.join(self.copy_dir, "system", "product", "lib", ))
+        #shutil.rmtree(os.path.join(self.copy_dir, "system", "product", "lib64", ))
+        #shutil.rmtree(os.path.join(self.copy_dir, "system", "product", "priv-app", "AndroidAutoStub", ))
+        #shutil.rmtree(os.path.join(self.copy_dir, "system", "product", "priv-app", "GooglePartnerSetup", ))
+        #shutil.rmtree(os.path.join(self.copy_dir, "system", "product", "priv-app", "GoogleRestore", ))
+        #shutil.rmtree(os.path.join(self.copy_dir, "system", "product", "priv-app", "Velvet", ))
+
